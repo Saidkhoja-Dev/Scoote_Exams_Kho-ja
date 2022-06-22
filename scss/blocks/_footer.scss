@@ -2,9 +2,6 @@
     
     background-color: #333A44;
     
-    &__inner-container {
-    }
-    
     &__container {
         display: flex;
         align-items: center;
@@ -30,18 +27,11 @@
         justify-content: space-between;
         margin-left: 58px;
     }
-    
-    &__nav {
-    }
-    
+
     &__list {
         display: flex;
         align-items: center;
         gap: 32px;
-    }
-    
-    
-    &__item {
     }
     
     &__item-link {
@@ -61,12 +51,6 @@
         display: flex;
         align-items: center;
         gap: 24px;
-    }
-    
-    &__social-item {
-    }
-    
-    &__social-link {
     }
 
     &__social-svg {

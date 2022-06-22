@@ -80,7 +80,7 @@
     only screen and (                min-resolution: 192dpi),
     only screen and (                min-resolution: 2dppx) { 
         
-        .hero        {  
+        .hero {  
             background-image: url(./../images/hero_bg@2x.jpg);
         } 
     } 
@@ -198,9 +198,6 @@
                 right: 50%;
                 margin-left: 0;
             }
-        }
-        
-        &__container--active {
         }
         
         &__wrapper {

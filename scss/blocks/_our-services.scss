@@ -100,13 +100,6 @@
 @media only screen and (max-width: 1150px) {
     .our-services {
         
-        &__inner-container {
-        }
-        
-        &__container {
-            
-        }
-        
         &__list {
             display: flex;
             flex-direction: column;
@@ -151,9 +144,6 @@
                 left: calc(50% - 360px);
                 top: 3%;
             }
-        }
-        
-        &__wrapper {
         }
         
         &__heading {
@@ -229,9 +219,6 @@
                 left: calc(50% - 50px);
                 top: 3%;
             }
-        }
-        
-        &__wrapper {
         }
         
         &__heading {
