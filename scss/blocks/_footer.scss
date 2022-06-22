@@ -1,6 +1,6 @@
 .footer {
     
-    background-color: #333A44;
+    background-color: $footer-color;
     
     &__container {
         display: flex;
@@ -40,10 +40,10 @@
         font-weight: 700;
         font-size: 15px;
         line-height: 25px;
-        color: #939CAA;
+        color: $dim_grey;
 
         &:hover {
-            color: #FCB72B;
+            color: $yellow;
           }
     }
     
@@ -54,17 +54,17 @@
     }
 
     &__social-svg {
-        color: #FCB72B; 
+        color: $yellow; 
 
         &:hover {
-            color: #E5ECF4;
+            color: $light_grey;
         }
     }
 }
 
 @media only screen and (max-width: 630px) {
     .footer {
-        background-color: #333A44;
+        background-color: $dark;
         padding-top: 35px;
         padding-bottom: 33px;
         

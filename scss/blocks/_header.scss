@@ -1,63 +1,79 @@
 .header{
+
+    background-color: #FFFFFF;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 999;
     
-    &--container {
+    &__container{
         padding-top: 22px;
-        padding-bottom: 22px;
+        padding-bottom: 21px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo{
+        flex-shrink: 0;
+        text-decoration: none;
+
+        &:hover{
+            opacity: 0.6;
+        }
+    }
+  
+    &__logo--img{
+        flex-shrink: 0;
+        display: block;
+    }
+
+    &__navbar{
+        width: 100%;
+        max-width: 940px;
         display: flex;
         align-items: center;
         justify-content: space-between;
-    }
-    
-    &__menu {
-        display: none;
-    }
-    
-    &__left { 
-        display: flex;
-        align-items: center;
-    }
-    
-    &__nav {
         margin-left: 58px;
     }
-    
-    &__list {
-        display: flex;
-        align-items: center;
-        gap: 32px;
-        
+
+    &__menu{
+        padding: 0;
+        margin-left: 0;
+        display: none;
     }
-    
-    &__nav-item {
+
+    &__list{
+        list-style: none;
+        padding: 0;
+        display: flex;
+        margin: 0 -16px;
+    }
+
+    &__item{
+        margin: 0 16px;
+    }
+
+    &__nav--link{
         text-decoration: none;
-        font-weight: 700;
+        font-weight: bold;
         font-size: 15px;
         line-height: 25px;
-        color: #939CAA;
-    }
-    
-    &__nav-item + &__nav-item {
-        margin-left: 32px;
-    }
-    
-    &__nav-item:hover {
-        color: #FCB72B;
-    }
-    
-    &__nav-item:active {
-        color: #FCB72B;
-    }
-}
+        color: $dim_grey;
 
+        &:hover{
+            color: $yellow;
+        }
+    }  
+}
 
 .button {
     max-width: 180px;
     width: 100%;
     display: inline-block;
-    
     padding: 14px 39px;
     text-transform: capitalize;
-    background-color: #FCB72B;
+    background-color: $yellow;
     font-family: 'Space Mono';
     font-weight: 700;
     font-size: 15px;
@@ -66,221 +82,87 @@
     color: #FFFFFF;
     
     &:hover {
-        color: #FCB72B;
-        background-color: #fff;
-        box-shadow: 0 0 0 3px #FCB72B;
+        color: $yellow;
+        background-color: #FFFFFF;
+        box-shadow: 0 0 0 3px $yellow;
     }
 }
 
-
-@media only screen and( max-width:660px) {
-    .header {
-        
+@media only screen and (max-width: 633px){
+    .header{
         position: relative;
+        top: 0;
+        left: 0;
+
         
-        &--container {
-            padding: 0;
-            
+        .header--open .header__menu {
+            display: block;
+            background-image: url("./../images/burger.svg");
         }
-        
-        &__menu {
-            display: inline-block;
-            border: none;
-            margin-left: 32px;
-            background-color: white;
-        }
-        
-        &__left {
-            margin: 0 auto;
-        }
-        
-        &__logo {
-            padding: 34px 0;
-            
-        }
-        
-        &__nav {
+
+        .header--open .header__burger {
             display: none;
         }
-        
-        .button {
-            display: none;
-        }
-        
-        &--open &__nav {
-            display:flex;
+
+        .header--open &__navbar{
             margin: 0;
-            padding: 64px 0 50% 0;
+            padding-top: 64px;
+            margin-bottom: 24px;
+            background-color: $footer-color;
+            display: flex;
             flex-direction: column;
+            align-content: space-between;
             position: absolute;
             top: 100%;
             left: 0;
-            width: 70%;
-            background-color: #333A44;
         }
-        
-        &--open .button {
-            position: absolute;
-            top: 500px;
-            position: absolute;
-            padding: 14px 39px;
-            background-color: #FCB72B;
-            border: 2px solid #FCB72B;
-            font-weight: 700;
-            font-size: 15px;
+
+        .header--open &__list{
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header--open &__nav--link{
+            font-size: 18px;
             line-height: 25px;
-            text-align: center;
-            color: #FFFFFF;
-            
+            color: $light_grey;
         }
-        
-        &--open &__nav-item {
-            // padding: 64px 0;
-            margin-left: 32px;
+
+        .header--open &__item:not(:last-child){
+            margin-bottom: 24px;
         }
-        
-        &--open &__nav-item + &__nav-item {
-            margin-left: 32px;
-            margin-top: 24px;
-        }   
-        
+
+
+        &__container{
+            padding-top: 22px;
+            padding-left: 22px;
+            display: flex;
+            align-items: center;
+            flex-direction: row-reverse;
+        }
+
+        .header__menu{
+            vertical-align: middle;
+            margin-left: 0;
+            border: none;
+            background-color: #FFFFFF;
+            display: inline-block;
+        }
+
+        &__logo{
+            margin-right: 19px;
+            margin: 0 auto;
+        }
+
+        &__navbar{
+            width: 70vw;
+            min-height: 100vh;
+            display: none;
+        }
+
+        .header__btn{
+          margin-bottom: 200px;  
+        }
     }
 }
-
-
-
-
-// .header {
-    
-    //     &__container {
-        //         display: flex;
-        //         align-items: center;
-        //         padding-top: 22px;
-        //         padding-bottom: 22px;
-        //     }
-        
-        //     &__wrapper {
-            //         max-width: 945px;
-            //         width: 100%;
-            //         display: flex;
-            //         align-items: center;
-            //         margin-left: 58px;
-            //         justify-content: space-between;
-            //     }
-            
-            //     &__link {
-                //         &:hover {
-                    //             opacity: 0,8;
-                    //         }
-                    
-                    //         &:hover {
-                        //             opacity: 0,3;
-                        //         }
-                        //     }
-                        
-                        //     &__list {
-                            //         display: flex;
-                            //         align-items: center;
-                            //         gap: 32px;
-                            //     }
-                            
-                            
-                            //     &__item-link {
-                                //         text-transform: capitalize;
-                                //         font-family: 'Space Mono';
-                                //         font-weight: 700;
-                                //         font-size: 15px;
-                                //         line-height: 25px;
-                                //         color: #939CAA;
-                                
-                                //         &:hover {
-                                    //           color: #FCB72B;
-                                    //         }
-                                    //     }
-                                    // }
-                                    
-                                    //     &:hover {
-                                        //         background-color: #fff;
-                                        //         box-shadow: 0 0 0 3px #FCB72B;
-                                        //         color: #FCB72B;
-                                        //     }
-                                        // }
-                                        
-                                        
-                                        // @media only screen and (max-width:900px) {
-                                            
-                                            //     &__container {
-                                                //         padding: 15px 20px;
-                                                //         align-items: center;
-                                                //     }
-                                                
-                                                //     &__logo {
-                                                    //         margin-right: auto;
-                                                    //         margin-left: auto;
-                                                    //     }
-                                                    // }
-                                                    
-                                                    // @media only screen and (max-width: 500px) {
-                                                        
-                                                        //     .header {    
-                                                            //         &__container {
-                                                                //             display: flex;
-                                                                //             align-items: center;
-                                                                //             justify-content: center;
-                                                                //             position: relative;
-                                                                
-                                                                //             &::before {
-                                                                    //                 content: "";
-                                                                    //                 display: inline-block;
-                                                                    //                 width: 20px;
-                                                                    //                 height: 15px;
-                                                                    //                 background-image: url(./../images/burger.svg);
-                                                                    //                 position: absolute;
-                                                                    //                 top: 50%;
-                                                                    //                 left: calc(50% - 50%);
-                                                                    //                 transform: translateY(-50%);
-                                                                    //                 -webkit-transform: translateY(-50%);
-                                                                    //                 -moz-transform: translateY(-50%);
-                                                                    //                 -ms-transform: translateY(-50%);
-                                                                    //                 -o-transform: translateY(-50%);
-                                                                    // }
-                                                                    //         }
-                                                                    
-                                                                    //         &__wrapper {
-                                                                        //            display: none;
-                                                                        //         }
-                                                                        
-                                                                        //         &__link {
-                                                                            //             &:hover {
-                                                                                //                 opacity: 0,8;
-                                                                                //             }
-                                                                                
-                                                                                //             &:hover {
-                                                                                    //                 opacity: 0,3;
-                                                                                    //             }
-                                                                                    //         }
-                                                                                    
-                                                                                    //         &__list {
-                                                                                        //             display: flex;
-                                                                                        //             align-items: center;
-                                                                                        //             gap: 32px;
-                                                                                        //         }
-                                                                                        
-                                                                                        
-                                                                                        //         &__item-link {
-                                                                                            //             text-transform: capitalize;
-                                                                                            //             font-family: 'Space Mono';
-                                                                                            //             font-weight: 700;
-                                                                                            //             font-size: 15px;
-                                                                                            //             line-height: 25px;
-                                                                                            //             color: #939CAA;
-                                                                                            
-                                                                                            //             &:hover {
-                                                                                                //               color: #FCB72B;
-                                                                                                //             }
-                                                                                                //         }
-                                                                                                //     }
-                                                                                                // }   
-                                                                                                
-                                                                                                
-                                                                                                

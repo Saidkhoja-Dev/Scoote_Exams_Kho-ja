@@ -1,10 +1,10 @@
 .social {
     
     .bg-container {
-        background-image: url(../../images/social__round.svg);
+        background-image: url("./../images/social__round.svg");
         background-repeat: no-repeat;
         background-position: calc(50% + 250px) 135px;
-        background-color: #495567;
+        background-color: $dark;
     }
     
     &__inner-container {        
@@ -37,8 +37,9 @@
         display: flex;
         align-items: center;
         padding: 8px 16px;
-        background-color: #E5ECF4;
+        background-color: $light_grey;
         border-radius: 10px;
+        cursor: pointer;
     }
     
     &__item-info {
@@ -50,15 +51,15 @@
         font-size: 10px;
         line-height: 15px;
         letter-spacing: -0.446429px;
-        color: #495567;
+        color: $dark;
     }
     
     &__item-heading {
         font-family: 'Space Mono';
         font-size: 20px;
         line-height: 24px;
-        letter-spacing: -0.892857px;
-        color: #495567;
+        letter-spacing: -0.9px;
+        color: $dark;
     }
 }
 

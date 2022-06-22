@@ -12,7 +12,7 @@
             //     width: 1000px;
             //     height: 15px;
             //     display: block;
-            //     background-color: #E5ECF4;
+            //     background-color: $light_grey;
             //     position: absolute;
             //     left: calc(50% - 780px);
             //     top: 12.5%;
@@ -28,7 +28,7 @@
                 width: 1000px;
                 height: 15px;
                 display: block;
-                background-color: #E5ECF4;
+                background-color: $light_grey;
                 position: absolute;
                 left: calc(50% - 780px);
                 top: 12.5%;
@@ -40,9 +40,9 @@
                 display: block;
                 width: 96px;
                 height: 96px;
-                background-color: #FCB72B;
+                background-color: $yellow;
                 border-radius: 50%;
-                background-image: url("./../../images/app-icon.svg");
+                background-image: url("./../images/app-icon.svg");
                 background-repeat: no-repeat;
                 background-position: center;
                 margin-bottom: 40px;
@@ -53,9 +53,9 @@
                 display: block;
                 width: 96px;
                 height: 96px;
-                background-color: #FCB72B;
+                background-color: $yellow;
                 border-radius: 50%;
-                background-image: url("./../../images/scooter-icon.svg");
+                background-image: url("./../images/scooter-icon.svg");
                 background-repeat: no-repeat;
                 background-position: center;
                 margin-bottom: 40px;
@@ -66,9 +66,9 @@
                 display: block;
                 width: 96px;
                 height: 96px;
-                background-color: #FCB72B;
+                background-color: $yellow;
                 border-radius: 50%;
-                background-image: url("./../../images/ride-icon.svg");
+                background-image: url("./../images/ride-icon.svg");
                 background-repeat: no-repeat;
                 background-position: center;
                 margin-bottom: 40px;
@@ -78,22 +78,18 @@
         
         &__heading {
             font-family: 'Space Mono';
-            font-style: normal;
-            font-weight: 700;
             font-size: 24px;
             line-height: 28px;
             letter-spacing: -1.07143px;
-            color: #495567;
+            color: $dark;
             margin-bottom: 27px;
         }
         
         &__text {
             font-family: 'Lexend Deca';
-            font-style: normal;
-            font-weight: 400;
             font-size: 15px;
             line-height: 25px;
-            color: #939CAA;
+            color: $dim_grey;
         }
     }
 
@@ -117,7 +113,7 @@
                 width: 15px;
                 height: 400px;
                 display: block;
-                background-color: #E5ECF4;
+                background-color: $light_grey;
                 position: absolute;
                 left: calc(-39%);
                 top: -196.5%;
@@ -148,22 +144,18 @@
         
         &__heading {
             font-family: 'Space Mono';
-            font-style: normal;
-            font-weight: 700;
             font-size: 24px;
             line-height: 28px;
             letter-spacing: -1.07143px;
-            color: #495567;
+            color: $dark;
             margin-bottom: 27px;
         }
         
         &__text {
             font-family: 'Lexend Deca';
-            font-style: normal;
-            font-weight: 400;
             font-size: 15px;
             line-height: 25px;
-            color: #939CAA;
+            color: $dim_grey;
         }
     }
 }
@@ -173,7 +165,7 @@
         padding-top: 200px;
         &__list {
             &::before {
-                display: none;
+                @include reset;
             } 
             
             &::before {
@@ -191,7 +183,7 @@
             flex-direction: column;
 
             &::after {
-                display: none;
+                @include reset;
             }
             &:not(:first-child){
                 padding-top: 150px;
@@ -220,25 +212,21 @@
                 top: 3%;
             }
         }
-        
+
         &__heading {
             font-family: 'Space Mono';
-            font-style: normal;
-            font-weight: 700;
             font-size: 24px;
             line-height: 28px;
             letter-spacing: -1.07143px;
-            color: #495567;
+            color: $dark;
             margin-bottom: 27px;
         }
         
         &__text {
             font-family: 'Lexend Deca';
-            font-style: normal;
-            font-weight: 400;
             font-size: 15px;
             line-height: 25px;
-            color: #939CAA;
+            color: $dim_grey;
         }
     }
 }

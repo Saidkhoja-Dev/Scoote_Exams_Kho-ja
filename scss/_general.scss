@@ -1,6 +1,8 @@
 html {
     height: 100%;
     scroll-behavior: smooth;
+
+    //Mahmudxo'jayev's
 }
 
 *,
@@ -12,7 +14,10 @@ html {
 body {
     margin: 0;
     padding: 0;
-    font-family:  'Arial', monospace;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-family:  'Lexend Deca',  monospace;
     font-size: 16px;
     overflow-x: hidden;
 }
@@ -37,5 +42,7 @@ a {
 }
 
 main {
+    display: flex;
+    flex-direction: column;
     flex-grow: 1;
 }

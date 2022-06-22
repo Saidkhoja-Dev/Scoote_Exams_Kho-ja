@@ -16,8 +16,8 @@
         font-family: 'Space Mono';
         font-size: 48px;
         line-height: 48px;
-        letter-spacing: -2.14286px;
-        color: #495567;
+        letter-spacing: -2.15px;
+        color: $dark;
         margin-bottom: 24px;
     }
     
@@ -25,15 +25,17 @@
         font-family: 'Lexend Deca';
         font-size: 15px;
         line-height: 25px;
-        color: #939CAA;
+        color: $dim_grey;
         margin-bottom: 40px;
     }
 
     &__right {
+
         position: relative;
+        
         &::before {
             content: "";
-            background-image: url(./../images/telemetry_arrow.svg);
+            background-image: url("./../images/telemetry_arrow.svg");
             display: inline-block;
             position: absolute;
             background-repeat: no-repeat;
@@ -79,35 +81,16 @@
             line-height: 25px;
             margin-bottom: 40px;
         }
-        
-        &__button {
-            outline: none;
-            background: none;
-            background-color: #FCB72B;
-            padding-top: 14px;
-            padding-right: 44px;
-            padding-bottom: 14px;
-            padding-left: 44px;
-            font-family: 'Space Mono';
-            font-style: normal;
-            font-weight: 700;
-            font-size: 15px;
-            line-height: 25px;
-            text-align: center;
-            color: #FFFFFF;
-            
-           
-        }
     
         &__img-wrapper {
             position: relative;
-            box-shadow: 500px 0 0 0 #E5ECF4;
+            box-shadow: 500px 0 0 0 $light_grey;
             border-radius: 50%;
     
             &::before {
                 content: "";
                 display: block;
-                background-image: url("./../../images/telemetry_arrow.svg");
+                background-image: url("./../images/telemetry_arrow.svg");
                 position: absolute;
                 width: 740px;
                 height: 150px;
@@ -151,34 +134,16 @@
             line-height: 25px;
             margin-bottom: 40px;
         }
-        
-        &__button {
-            outline: none;
-            background: none;
-            background-color: #FCB72B;
-            padding-top: 14px;
-            padding-right: 44px;
-            padding-bottom: 14px;
-            padding-left: 44px;
-            font-family: 'Space Mono';
-            font-style: normal;
-            font-weight: 700;
-            font-size: 15px;
-            line-height: 25px;
-            text-align: center;
-            color: #FFFFFF;
-            
-        }
     
         &__img-wrapper {
             position: relative;
-            box-shadow: 500px 0 0 0 #E5ECF4;
+            box-shadow: 500px 0 0 0 $light_grey;
             border-radius: 50%;
     
             &::before {
                 content: "";
                 display: block;
-                background-image: url("./../../images/mobile_arrow_temeletry.svg");
+                background-image: url("./../images/mobile_arrow_temeletry.svg");
                 position: absolute;
                 width: 740px;
                 height: 150px;
