@@ -663,6 +663,12 @@ main {
   margin-left: 95px;
 }
 
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .hero .hero {
+    background-image: url(./../images/hero_bg@2x.jpg);
+  }
+}
+
 .button {
   display: inline-block;
   max-width: 180px;
