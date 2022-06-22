@@ -1,0 +1,233 @@
+.hero {
+    
+    margin-bottom: 160px;
+    
+    .bg-container {
+        width: 100%;
+        background-image: url(./../../images/hero_bg.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+    
+    &__wrapper {
+        max-width: 580px;
+        width: 100%;
+        padding-top: 153px;
+        padding-bottom: 153px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        margin-left: 40px;
+    }
+    
+    &__heading {
+        font-family: 'Space Mono';
+        font-weight: 700;
+        font-size: 56px;
+        line-height: 56px;
+        letter-spacing: -2.5px;
+        color: #FFFFFF;
+        
+    }
+    
+    &__text {
+        font-family: 'Lexend Deca';
+        font-size: 15px;
+        line-height: 25px;
+        color: #FFFFFF;
+        margin-left: 95px;
+        position: relative;
+        
+        &::before {
+            content: "";
+            display: inline-block;
+            max-width: 215px;
+            width: 100%;
+            height: 16px;
+            background-image: url(./../images/hero_line-yellow.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: absolute;
+            top: 50%;
+            right: calc(100% + 57px);
+        }
+
+        &::after {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            max-width: 446px;
+            width: 100%;
+            height: 137px;
+            background-image: url(./../images/hero_arrow.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            top: 50%;
+            left: calc(100% + 57px);
+        }
+    }
+    
+    &__btn {
+        margin-left: 95px;
+    }
+}
+
+.button {
+    display: inline-block;
+    max-width: 180px;
+    width: 100%;
+    padding: 14px 39px;
+    text-transform: capitalize;
+    background-color: #FCB72B;
+    font-family: 'Space Mono';
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+
+@media only screen and (max-width: 900px) {
+    .hero {
+        .bg-container {
+            width: 100%;
+            background-image: url("./../images/hero_tablet.jpg");
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        
+        &__container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 0;
+
+            &::after {
+                content: "";
+                display: inline-block;
+                max-width: 452px;
+                width: 100%;
+                height: 137px;
+                background-image: url("./../../images/hero_arrow.svg");
+                background-repeat: no-repeat;
+                background-size: contain;
+                position: absolute;
+                bottom: -177px;
+                right: 50%;
+                margin-left: 0;
+            }
+        }
+        
+        &__wrapper {
+            max-width: 573px;
+            width: 100%;
+            padding-top: 137px;
+            padding-bottom: 217px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+        }
+        
+        &__heading {
+            text-align: center;
+        }
+        
+        &__text {
+            max-width: 573px;
+            width: 100%;
+            text-align: center;
+            margin-left: 0;
+    
+            &::before {
+                display: none;
+            }
+    
+            &::after {
+                display: none;
+            }
+        }
+        
+        &__btn {
+            margin-left: 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .hero {
+        .bg-container {
+            width: 100%;
+            background-image: url("./../../images/mobile_hero.png");
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        
+        &__container {
+            margin-bottom: 120px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &::after {
+                content: "";
+                display: inline-block;
+                max-width: 452px;
+                width: 100%;
+                height: 137px;
+                background-image: url("./../../images/hero_arrow.svg");
+                background-repeat: no-repeat;
+                background-size: contain;
+                position: absolute;
+                bottom: -144px;
+                right: 50%;
+                margin-left: 0;
+            }
+        }
+        
+        &__container--active {
+        }
+        
+        &__wrapper {
+            max-width: 311px;
+            width: 100%;
+            padding-top: 115px;
+            padding-bottom: 179px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+        }
+        
+        &__heading {
+            font-size: 40px;
+            line-height: 40px;
+            letter-spacing: -2.5px;
+            color: #FFFFFF;
+        }
+        
+        &__text {
+            max-width: 405px;
+            width: 100%;
+            font-size: 15px;
+            line-height: 25px;
+            color: #FFFFFF;
+            margin-left: 0;
+            position: relative;
+    
+            &::before {
+                display: none;
+            }
+    
+            &::after {
+                display: none;
+            }
+        }
+        
+        &__btn {
+            margin-left: 0;
+        }
+    }
+}

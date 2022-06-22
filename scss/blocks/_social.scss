@@ -1,0 +1,105 @@
+.social {
+    
+    .bg-container {
+        background-image: url(../../images/social__round.svg);
+        background-repeat: no-repeat;
+        background-position: calc(50% + 250px) 135px;
+        background-color: #495567;
+    }
+    
+    &__inner-container {        
+        padding-top: 102px;
+        padding-bottom: 102px;
+    }
+    
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__heading {
+        max-width: 415px;
+        width: 100%;
+        font-family: 'Space Mono';
+        font-size: 48px;
+        line-height: 48px;
+        letter-spacing: -2.14286px;
+        color: #FFFFFF;
+    }
+    
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+    }
+    
+    &__item {
+        display: flex;
+        align-items: center;
+        padding: 8px 16px;
+        background-color: #E5ECF4;
+        border-radius: 10px;
+    }
+    
+    &__item-info {
+        margin-left: 12px;
+    }
+    
+    &__item-text {
+        font-family: 'Space Mono';
+        font-size: 10px;
+        line-height: 15px;
+        letter-spacing: -0.446429px;
+        color: #495567;
+    }
+    
+    &__item-heading {
+        font-family: 'Space Mono';
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: -0.892857px;
+        color: #495567;
+    }
+}
+
+
+
+@media only screen and (max-width: 950px) {
+    .social {
+        
+        &__wrapper {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            
+        }
+        
+        &__heading {
+            max-width: 457px;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+    }
+}
+
+@media only screen and (max-width: 510px) {
+    .social {
+        
+        &__wrapper {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            
+        }
+        
+        &__heading {
+            max-width: 311px;
+            width: 100%;
+            font-size: 32px;
+            line-height: 32px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+    }
+}

@@ -1,0 +1,198 @@
+.telemetry {
+    
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 155px;
+    }
+    
+    &__left {
+        max-width: 445px;
+        width: 100%;
+    }
+    
+    &__heading {
+        font-family: 'Space Mono';
+        font-size: 48px;
+        line-height: 48px;
+        letter-spacing: -2.14286px;
+        color: #495567;
+        margin-bottom: 24px;
+    }
+    
+    &__text {
+        font-family: 'Lexend Deca';
+        font-size: 15px;
+        line-height: 25px;
+        color: #939CAA;
+        margin-bottom: 40px;
+    }
+
+    &__right {
+        position: relative;
+        &::before {
+            content: "";
+            background-image: url(./../images/telemetry_arrow.svg);
+            display: inline-block;
+            position: absolute;
+            background-repeat: no-repeat;
+            width: 740px;
+            height: 150px;
+            bottom: 0;
+            left: calc(100% - 570px);
+        }
+        
+    }
+    
+    &__background {
+        border-radius: 50%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .telemetry {
+    
+        &__container {
+            display: flex;
+            align-items: center;
+            flex-direction: column-reverse;
+        }
+        
+        &__wrapper {
+            max-width: 573px;
+            width: 100%;
+            order: 2;
+            text-align: center;
+        }
+        
+        &__heading {
+            max-width: 457px;
+            width: 100%;
+            font-size: 48px;
+            line-height: 48px;
+            margin-bottom: 24px;
+        }
+        
+        &__text {
+            font-size: 15px;
+            line-height: 25px;
+            margin-bottom: 40px;
+        }
+        
+        &__button {
+            outline: none;
+            background: none;
+            background-color: #FCB72B;
+            padding-top: 14px;
+            padding-right: 44px;
+            padding-bottom: 14px;
+            padding-left: 44px;
+            font-family: 'Space Mono';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 25px;
+            text-align: center;
+            color: #FFFFFF;
+            
+           
+        }
+    
+        &__img-wrapper {
+            position: relative;
+            box-shadow: 500px 0 0 0 #E5ECF4;
+            border-radius: 50%;
+    
+            &::before {
+                content: "";
+                display: block;
+                background-image: url("./../../images/telemetry_arrow.svg");
+                position: absolute;
+                width: 740px;
+                height: 150px;
+                background-repeat: no-repeat;
+                bottom: 0px;
+                left: calc(-25%);
+            }
+        }
+
+        &__img {
+            margin-bottom: 56px;
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .telemetry {
+    
+        &__container {
+            display: flex;
+            align-items: center;
+            flex-direction: column-reverse;
+        }
+        
+        &__wrapper {
+            max-width: 311px;
+            width: 100%;
+           
+        }
+        
+        &__heading {
+           max-width: 311px;
+           width: 100%;
+           font-size: 32px;
+           line-height: 32px;
+            margin-bottom: 32px;
+        }
+        
+        &__text {
+            font-size: 15px;
+            line-height: 25px;
+            margin-bottom: 40px;
+        }
+        
+        &__button {
+            outline: none;
+            background: none;
+            background-color: #FCB72B;
+            padding-top: 14px;
+            padding-right: 44px;
+            padding-bottom: 14px;
+            padding-left: 44px;
+            font-family: 'Space Mono';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 25px;
+            text-align: center;
+            color: #FFFFFF;
+            
+        }
+    
+        &__img-wrapper {
+            position: relative;
+            box-shadow: 500px 0 0 0 #E5ECF4;
+            border-radius: 50%;
+    
+            &::before {
+                content: "";
+                display: block;
+                background-image: url("./../../images/mobile_arrow_temeletry.svg");
+                position: absolute;
+                width: 740px;
+                height: 150px;
+                background-repeat: no-repeat;
+                bottom: 56px;
+                left: calc(-6%);
+            }
+        }
+
+        &__img {
+            width: 311px;
+            height: 311px;
+            object-fit: contain;
+            margin-bottom: 56px;
+        }
+    }
+}

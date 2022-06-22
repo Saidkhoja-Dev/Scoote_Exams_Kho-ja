@@ -1,0 +1,124 @@
+.footer {
+    
+    background-color: #333A44;
+    
+    &__inner-container {
+    }
+    
+    &__container {
+        display: flex;
+        align-items: center;
+        padding-top: 35px;
+        padding-bottom: 32px;
+    }
+    
+    &__link {
+        &:hover {
+            opacity: 0,8;
+        }
+        
+        &:hover {
+            opacity: 0,3;
+        }
+    }
+
+    &__wrapper {
+        max-width: 945px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 58px;
+    }
+    
+    &__nav {
+    }
+    
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+    }
+    
+    
+    &__item {
+    }
+    
+    &__item-link {
+        text-transform: capitalize;
+        font-family: 'Space Mono';
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 25px;
+        color: #939CAA;
+
+        &:hover {
+            color: #FCB72B;
+          }
+    }
+    
+    &__social-list {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+    }
+    
+    &__social-item {
+    }
+    
+    &__social-link {
+    }
+
+    &__social-svg {
+        color: #FCB72B; 
+
+        &:hover {
+            color: #E5ECF4;
+        }
+    }
+}
+
+@media only screen and (max-width: 630px) {
+    .footer {
+        background-color: #333A44;
+        padding-top: 35px;
+        padding-bottom: 33px;
+        
+        &__container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        &__link {
+            margin-right: 0px;
+        }
+        
+        &__link-logo {
+            max-width: 107px;
+            width: 100%;
+            margin-bottom: 41px;
+        }
+        
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+        }
+        
+        &__list {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            gap: 16px;
+            margin-bottom: 87px;
+        }
+        
+    
+        &__social-list {
+            display: flex;
+            gap: 24px;
+        }
+    }
+}
